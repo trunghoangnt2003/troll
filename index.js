@@ -6,7 +6,7 @@ const random = require("random");
 const path = "./data.json";
 
 const isValidDate = (date) => {
-  const startDate = moment("2024-01-01");
+  const startDate = moment("2023-01-01");
   const endDate = moment("2024-12-13"); 
   return date.isBetween(startDate, endDate, null, "[]");
 };
@@ -26,7 +26,7 @@ const makeCommits = async (n) => {
   for (let i = 0; i < n; i++) {
     const randomWeeks = Math.floor(Math.random() * (54 * 4 + 1)); // Số tuần ngẫu nhiên
     const randomDays = Math.floor(Math.random() * 7); // Ngày trong tuần ngẫu nhiên
-    const randomDate = moment("2024-01-01")
+    const randomDate = moment("2023-01-01")
       .add(randomWeeks, "weeks")
       .add(randomDays, "days");
 
